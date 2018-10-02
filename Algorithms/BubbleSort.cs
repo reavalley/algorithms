@@ -6,10 +6,9 @@ namespace Algorithms
     {
         public static IEnumerable<int> Sort(int[] listToSort)
         {
-            int m = 0;
-            int k = 0;
-            int n = listToSort.Length - 1;
-
+            var m = 0;
+            var k = 0;
+            var n = listToSort.Length - 1;
 
             while (m < n)
             {
@@ -17,16 +16,14 @@ namespace Algorithms
                 {
                     if (listToSort[k] > listToSort[k+1])
                     {
-                        int a = listToSort[k];
-                        int b = listToSort[k + 1];
+                        var a = listToSort[k];
+                        var b = listToSort[k + 1];
 
                         listToSort[k] = b;
                         listToSort[k + 1] = a;
                     }
-
                     k++;
                 }
-
                 k = 0;
                 m++;
             }
@@ -34,7 +31,7 @@ namespace Algorithms
             return listToSort;
         }
         
-        public IEnumerable<int> Sort1(int[] listToSort)
+        public IEnumerable<int> Sort2(int[] listToSort)
         {
             foreach (var val in listToSort)
             {
@@ -51,7 +48,6 @@ namespace Algorithms
                     listToSort[i + 1] = a;
                 }
             }
-
             return listToSort;
         }
     }
