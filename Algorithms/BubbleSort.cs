@@ -27,7 +27,6 @@ namespace Algorithms
                 k = 0;
                 m++;
             }
-
             return listToSort;
         }
         
